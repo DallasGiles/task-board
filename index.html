@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Task Board</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+</head>
+<body>
+    <div id="task-board">
+        <div class="column" id="not-started">
+            <h2>Not Yet Started</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="in-progress">
+            <h2>In Progress</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="completed">
+            <h2>Completed</h2>
+            <div class="task-list"></div>
+        </div>
+        <button id="add-task-btn">Add Task</button>
+    </div>
+    
+    <div id="task-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add New Task</h3>
+            <label for="task-title">Title:</label>
+            <input type="text" id="task-title" required>
+            <label for="task-desc">Description:</label>
+            <textarea id="task-desc" required></textarea>
+            <label for="task-deadline">Deadline:</label>
+            <input type="date" id="task-deadline" required>
+            <button id="save-task-btn">Save Task</button>
+            <button id="close-modal-btn">Cancel</button>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs/dayjs.min.js"></script>
+<script src='index.js'></script>
+</html>
